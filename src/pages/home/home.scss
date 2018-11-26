@@ -1,3 +1,38 @@
 page-home {
+    
+}
 
+.content {
+  background-color: black;
+  color: white;
+  font-size: 60px;
+}
+
+.btn{
+    height: 70px;
+    width: 90%;
+    font-size: 30px;    
+}
+
+.btn:hover{
+    filter: brightness(150%);
+}
+
+#basic-btn{
+    background-color: lightslategray;
+    color:black;
+    
+}
+
+#operator-btn{
+    background-color: rgb(255, 136, 0);
+}
+
+#num-btn{
+    background-color: rgb(30, 41, 41);  
+}
+
+#zero{
+    background-color: rgb(30, 41, 41); 
+    width: 95%; 
 }

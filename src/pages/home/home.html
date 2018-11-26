@@ -1,14 +1,49 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+<ion-content padding class="content">
+    <br />
+    <ion-grid no-padding>
+      <ion-row justify-content-around	>
+        <ion-input
+          type="text"
+          value="{{disp}}"
+          text-right
+          aria-readonly="true"
+        ></ion-input>
+      </ion-row>
+  
+      <ion-row justify-content-around	>
+        <ion-col col-xs-3><button ion-button class="btn" id="basic-btn" round (click)="clear()">C</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="basic-btn" round (click)="input('negate')">±</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="basic-btn" round (click)="input('delete')">←</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="operator-btn" round (click)="selectedOperator('/')">÷</button></ion-col>
+      </ion-row>
+  
+      <ion-row justify-content-around	>
+        <ion-col col-xs-3><button ion-button class="btn" id="num-btn" round (click)="input('7')">7</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="num-btn" round (click)="input('8')">8</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="num-btn" round (click)="input('9')">9</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="operator-btn" round (click)="selectedOperator('*')">×</button></ion-col>
+      </ion-row>
+      
+      <ion-row justify-content-around	>
+        <ion-col col-xs-3><button ion-button class="btn" id="num-btn" round (click)="input('4')">4</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="num-btn" round (click)="input('5')">5</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="num-btn" round (click)="input('6')">6</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="operator-btn" round (click)="selectedOperator('-')">-</button></ion-col>
+      </ion-row>   
+  
+      <ion-row justify-content-around	>
+        <ion-col col-xs-3><button ion-button class="btn" id="num-btn" round (click)="input('1')">1</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="num-btn" round (click)="input('2')">2</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="num-btn" round (click)="input('3')">3</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="operator-btn" round (click)="selectedOperator('+')">+</button></ion-col>
+      </ion-row>
+     
+      <ion-row justify-content-around	>
+        <ion-col col-6><button ion-button class="btn" id="zero" round (click)="input('0')">0</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="num-btn" round (click)="input('.')">.</button></ion-col>
+        <ion-col col-xs-3><button ion-button class="btn" id="operator-btn" round (click)="equals()">=</button></ion-col>
+      </ion-row>
+       
+    </ion-grid>
+  </ion-content>
+  
